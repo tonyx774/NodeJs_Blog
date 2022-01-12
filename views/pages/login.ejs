@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+<style> 
+
+ 
+ </style>
+  <body>
+    <%- include('../partials/header'); %>
+    <div class="login">
+      <h1>Login</h1>
+      <p>By logging in you will have the ability to create blogs</p>
+      <p style="color:red"><%= errMess %></p>
+      <form action="" method="post">
+       
+        
+        <input class="textBox"id="username" type="text" name="username" placeholder="username">
+        <br>
+        <br>
+        
+        <input type="password" class="textBox" id="password" type="text" name="password" placeholder="password">
+        <br>
+        <input type="submit" class="button"type="submit" value="Submit">
+        
+    </form>
+    </div>
+    
+   
+    
+    <%- include('../partials/footer'); %>
+  </body>
+</html>

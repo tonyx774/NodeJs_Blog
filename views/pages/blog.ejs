@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+  <body>
+    <%- include('../partials/header'); %>
+    <h1><%= pageTitle %></h1>
+    
+    <h4>Here you can see all of the current user posted blogs</h4>
+    <form action="/create/<%= userid %>">
+      <input type="submit"  class="button5"type="submit" value="Create a new blog">
+  </form>
+
+
+
+
+
+
+
+
+    <div class = "blogsDisplay">
+    <% blogs.forEach((blog) => { %>
+      <h1><%= blog.title %></h1>
+      <p style="width:50%"><%= blog.content%></p>
+      
+      <form action="/delete/<%= blog.blogid %>">
+        <input type="submit" href="/edit/<%= blog.blogid %>" class="button2"type="submit" value="Delete">
+    </form>
+    <form action="/edit/<%= blog.blogid %>">
+      <input type="submit" class="button3"type="submit" value="Edit">
+    </form>
+      <% }); %>
+      
+    </div>
+
+
+
+
+
+      
+    <%- include('../partials/footer'); %>
+  </body>
+</html>

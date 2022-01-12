@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+<style> 
+
+ 
+ </style>
+  <body>
+    <%- include('../partials/header'); %>
+    <div class="create">
+      <h1>Create a new Blog</h1>
+      
+      <form action="" method="post">
+       
+        
+        <input class="textBox"id="title" type="text" name="title" placeholder="Title">
+        <br>
+        <br>
+        
+        <textarea rows="10" cols="120" placeholder="Write your blog content here..."  id="content" name="content"></textarea>
+        <br>
+        <br>
+        <input  class="textBox" id="searchTerm" type="text" name="searchTerm" placeholder="Searchterm">
+        <br>
+        
+        <input type="submit" class="button"type="submit" value="Submit">
+    </form>
+    </div>
+    
+   
+    
+    <%- include('../partials/footer'); %>
+  </body>
+</html>

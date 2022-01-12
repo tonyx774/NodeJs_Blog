@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head'); %>
+<style> 
+
+ 
+ </style>
+  <body>
+    <%- include('../partials/header'); %>
+    <div class="create">
+      <h1>Edit a blog</h1>
+      <p>If you are logged in as the user who created it it will be edited otherwise you will be redirected to blogs and there will be no change</p>
+      
+      <form action="" method="post">
+       
+        
+        <input class="textBox"id="title" type="text" name="title" placeholder="Title" value="<%= blog.title %>">
+        <br>
+        <br>
+        
+        <textarea rows="10" cols="120" id="content" name="content"  placeholder="Write your blog content here..." ><%= blog.content %></textarea>
+        <br>
+        <br>
+        <input type="text" class="textBox" id="searchTerm" type="text" name="searchTerm" placeholder="Searchterm"  value="<%= blog.searchTerm %>">
+        <br>
+        
+        <input type="submit" class="button"type="submit" value="Submit">
+    </form>
+    </div>
+    
+   
+    
+    <%- include('../partials/footer'); %>
+  </body>
+</html>
